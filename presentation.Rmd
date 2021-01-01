@@ -1,0 +1,27 @@
+---
+title: "Presentation"
+author: "Kuwahara Takafumi"
+date: "2021/1/1"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Mtcars
+```{r cars, echo=FALSE, message=FALSE}
+library('plotly')
+data('mtcars')
+plot_ly(x = mtcars$mpg, y = mtcars$wt, z = mtcars$hp) %>%
+    layout(
+        title = 'Motor cars spec. in a 3d scatter plot',
+        scene = list(
+            xaxis = list(title = 'Miles/(US) gallon'),
+            yaxis = list(title = 'Weight (1000 lbs)'),
+            zaxis = list(title = 'Gross horsepower')
+    ))
+```
+
+## Thanks
+
